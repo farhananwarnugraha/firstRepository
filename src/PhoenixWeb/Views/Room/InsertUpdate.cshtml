@@ -1,0 +1,52 @@
+        @model Room.RoomUpsertViewModel
+        <div class="insert-update">  
+            <h3>Insert Room Data</h3> 
+            <form method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label>Number Room *</label></td>
+                            <td>
+                                <input type="text" asp-for="@Model.Number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Floor</label></td>
+                            <td>
+                                <input type="number" asp-for="@Model.Floor">
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td><label>Room Type</label></td>
+                            <td>
+                                <input type="text" asp-for="@Model.RoomType">
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td><label>Guest Limit</label></td>
+                            <td>
+                                <input type="number" asp-for="@Model.GuestLimit">
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td><label>Cost</label></td>
+                            <td>
+                                <input type="text" asp-for="@Model.Cost">
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td><label for="">Description</label></td>
+                            <td>
+                                <textarea asp-for="@Model.Description" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit" value="Submit" class="save">Save</button>
+                                <a asp-action="Index" class="btn cancle">Cancle</a>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+              </form>
+        </div>

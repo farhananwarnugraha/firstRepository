@@ -1,0 +1,69 @@
+		@model Reservation.RservationIndexViewModel
+		<div class="table-data">
+			
+			<div class="form-search">
+                <p>Search Data</p>
+                <form action="" method="post" class="serach">
+                    <input type="text" name="" id="" placeholder="Room Number">
+                    <input type="text" name="" id="" placeholder="Guest Username">
+                    Book Before
+                    <input type="date" name="" id="">
+					<button type="submit">Search</button>
+                </form>
+            </div>   
+
+            <div class="data-set">
+                <div class="button-add">
+                    <a asp-action="Insert" class="create-button">Total Income</a>
+                </div>
+                <table class="data">
+                    <thead>
+                        <th>Code</th>
+                        <th>Room Number</th>
+                        <th>Username</th>
+                        <th>Book Date</th>
+                        <th>Check In</th>
+                        <th>Check Out</th>
+                        <th>Payment Date</th>
+                    </thead>
+                    <tbody>
+						@foreach(var reservation in Model.Reservations){
+                            if(Model.Reservations.Count == 0){
+                                <tr>
+                                    <td colspan="7">
+                                        <p>Opps, Reservation is Empty</p>
+                                    </td>
+                                </tr>
+                            }else{
+                                <tr>
+                                    <td>
+                                        <a asp-action="Item" asp-route-roomNumber="@reservation.Code" class="button delete" code="@reservation.Code">@reservation.Code</a>
+                                    </td>
+                                    <td>@reservation.RoomNumber</td>
+                                    <td>@reservation.GuestNumber</td>
+                                    <td>@reservation.BookDate</td>
+                                    <td>@reservation.CheckIn</td>
+                                    <td>@reservation.CheckOut/td>
+                                    <td>@reservation.CheckOut</td>
+                                </tr>
+                            }
+						}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">
+                                <div class="pagination">
+                                    <div>Page @Model.Paginations.PageNumber of @Model.Paginations.TotalPages </div>
+                                        <div>
+											@for(int pageNumber=1 ; pageNumber<=Model.Paginations.TotalPages; pageNumber++){
+                                            	<a  asp-action="Index" asp-route-pageNumber="@pageNumber"  class="number"> @pageNumber </a>
+											}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>

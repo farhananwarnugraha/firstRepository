@@ -1,0 +1,97 @@
+@model Inventory.InventoryIndexViewModel
+        <div class="table-data">   
+            <div class="data-set">
+                <div class="button-add">
+                    <a href="#" class="create-button">Add new inventory</a>
+                </div>
+                <table class="data">
+                    <thead>
+                        <th>Action</th>
+                        <th>Name</th>
+                        <th>Stock</th>
+                        <th>Description</th>
+                    </thead>
+                    <tbody>
+						@foreach(var listInventory in Model.Inventories){
+                            if(listInventory == null){
+                                <tr>
+                                    <td colspan="4">
+                                        <p>Opps, Inventory is Empty</p>
+                                    </td>
+                                </tr>
+                            }else{
+                                <tr>
+                                    <td>
+                                        <a href="#" class="button edit" nameInventory="@listInventory.Name">Edit</a>
+                                        <a href="#" class="button delete" nameInventory="@listInventory.Name">Delete</a>
+                                    </td>
+                                    <td>@listInventory.Name</td>
+                                    <td>@listInventory.Stock</td>
+                                    <td>@listInventory.Description</td>
+                                </tr>
+                            }
+						}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <div class="pagination">
+                                    <div>Page @Model.Paginations.PageNumber of @Model.Paginations.TotalPages</div>
+                                        <div>
+											@for(int pageNumber=1 ; pageNumber<=Model.Paginations.TotalPages; pageNumber++){
+                                            	<a  asp-action="Index" asp-route-pageNumber="@pageNumber" class="number"> @pageNumber </a>
+											}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="modal-layer">
+            <div class="input-update">
+                <form method="post" class="upsert-form" action="">
+                    <h3>Add New Admin</h3>
+                    <input type="hidden" />
+                    <input type="hidden" />
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label>Name *</label></td>
+                                <td>
+                                    <input type="text" name="name" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Stock *</label></td>
+                                <td>
+                                    <input type="number" name="stock" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Description</label></td>
+                                <td><textarea name="description" cols="30" rows="10"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="insert modal-button" >Simpan</button>
+                    <button class="update modal-button">Ubah</button>
+                    <button type="button" class="cancle modal-button">Batal</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-layer confirmation-delete">
+            <div class="confirmtion-delete">
+                <h2>Delete Inventroy</h2>
+                <h3>Are You sure for delete this Inventory?</h3>
+                <div class="button-class">
+                    <button class="yes-button" type="submit">Delete</button>
+                    <button class="no-button" type="submit">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <script src="~/JS/inventory.js"></script>

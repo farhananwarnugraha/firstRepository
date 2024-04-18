@@ -1,0 +1,41 @@
+    @{
+        Layout = "_LayoutLogin";
+    }
+    @model Auth.AuthLoginViewModel
+    <div id="id01" class="modal">
+        <form class="modal-content animate" asp-action="Index" method="post">
+            <div class="imgcontainer">
+                <p>@ViewBag.Error</p>
+                <h3>Login Here</h3>
+            </div>
+        
+            <div class="container">
+                <label asp-for="Username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" asp-for="Username" required>
+        
+                <label asp-for="Password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" asp-for="Password" required>
+                
+                <label asp-for="Role"><b>Role</b></label>
+                <select asp-for="Role">
+                    <option value="">Chose Role</option>
+                    @if(Model!=null){
+                        foreach(var role in Model.Roles){
+                            <option value="@role.Text">@role.Value</option>
+                        }
+                    }
+                </select>
+
+                <button type="submit">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                
+            </div>
+        
+            <div class="container-bottom">
+                Don't have account?
+                <a asp-action="Register" classs="cancelbtn">Register here!</a>
+            </div>
+        </form>
+      </div>

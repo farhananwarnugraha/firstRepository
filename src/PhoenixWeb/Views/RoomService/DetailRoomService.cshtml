@@ -1,0 +1,125 @@
+		@model RoomServices.DetailRoomServiceViewModel
+		<div class="table-data">
+			
+			<div class="form-search">
+                <table>
+                    <tr>
+                        <td>@Model.DetailRoomService.EmployeeNumber</td>
+                    </tr>
+                    <tr>
+                        <td>@Model.DetailRoomService.FullName</td>
+                    </tr>
+                    <tr>
+                        <td>@Model.DetailRoomService.OutsourcingCompany</td>
+                    </tr>
+                </table>
+            </div>   
+
+            <div class="data-set">
+                <div class="button-add">
+                    <a href="#" class="create-button">Edit Roaster</a>
+                </div>
+                <table class="data-roaster">
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>
+                                <span>@(Model.MondayRoasterStart?.ToString(@"hh\:mm")??"00:00")</span> - <span>@(Model.MondayRoasterFinish?.ToString(@"hh\:mm")??"00:00")</span>
+                            </td>
+                       </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>
+                                <span>@(Model.TuesdayRoasterStart?.ToString(@"hh\:mm")??"00:00")</span> - <span>@(Model.TuesdayRoasterFinish?.ToString(@"hh\:mm")??"00:00")</span>
+                            </td>
+                       </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>
+                                <span>@(Model.WednesdayRoasterStart?.ToString(@"hh\:mm")??"00:00")</span> - <span>@(Model.WednesdayRoasterFinish?.ToString(@"hh\:mm")??"00:00")</span>
+                            </td>
+                       </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>
+                                <span>@(Model.ThursdayRoasterStart?.ToString(@"hh\:mm")??"00:00")</span> - <span>@(Model.ThursdayRoasterFinish?.ToString(@"hh\:mm")??"00:00")</span>
+                            </td>
+                       </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>
+                                <span>@(Model.FridayRoasterStart?.ToString(@"hh\:mm")??"00:00")</span> - <span>@(Model.FridayRoasterFinish?.ToString(@"hh\:mm")??"00:00")</span>
+                            </td>
+                       </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>
+                                <span>@(Model.SaturdayRoasterStart?.ToString(@"hh\:mm")??"00:00")</span> - <span>@(Model.SaturdatRoasterFinish?.ToString(@"hh\:mm")??"00:00")</span>
+                            </td>
+                       </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>
+                                <span>@(Model.SundayRoasterStart?.ToString(@"hh\:hh")??"00:00")</span> - <span>@(Model.SundayRoasterFinish?.ToString(@"hh\:mm")??"00:00")</span>
+                            </td>
+                       </tr>
+                    </tbody>
+                </table>
+            </div>  
+
+            <div class="data-set edit-roaster">
+               <form asp-action="Update" asp-route-employeeNumber="@Model.DetailRoomService.EmployeeNumber" method="post">
+                    <div class="button-add">
+                        <button type="submit" class="create-button">Update</button>
+                    </div>
+                    <table class="data-roaster">
+                        <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>
+                                        <input type="time" asp-for="@Model.MondayRoasterStart"> - <input type="time" asp-for="@Model.MondayRoasterFinish">
+                                </td>
+                        </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>
+                                    <span><input type="time" asp-for="@Model.TuesdayRoasterStart"></span> - <span><input type="time" asp-for="@Model.TuesdayRoasterFinish"></span>
+                                </td>
+                        </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>
+                                    <span><input type="time" asp-for="@Model.WednesdayRoasterStart"></span> - <span><input type="time" asp-for="@Model.WednesdayRoasterFinish"></span>
+                                </td>
+                        </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>
+                                    <span><input type="time" asp-for="@Model.ThursdayRoasterFinish"></span> - <span><input type="time" asp-for="@Model.ThursdayRoasterFinish"></span>
+                                </td>
+                        </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>
+                                    <span><input type="time" asp-for="@Model.FridayRoasterStart"></span> - <span><input type="time" asp-for="@Model.FridayRoasterFinish"></span>
+                                </td>
+                        </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>
+                                    <span><input type="time" asp-for="@Model.SaturdayRoasterStart"></span> - <span><input type="time" asp-for="@Model.SaturdatRoasterFinish"></span>
+                                </td>
+                        </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>
+                                    <span><input type="time" asp-for="@Model.SundayRoasterStart"></span> - <span><input type="time" asp-for="@Model.SundayRoasterFinish"></span>
+                                </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <script src="~/JS/detailemployee.js"></script>

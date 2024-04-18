@@ -1,0 +1,200 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixWeb\\PhoenixWeb.csproj": {}
+  },
+  "projects": {
+    "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixBusiness\\PhoenixBusiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixBusiness\\PhoenixBusiness.csproj",
+        "projectName": "PhoenixBusiness",
+        "projectPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixBusiness\\PhoenixBusiness.csproj",
+        "packagesPath": "C:\\Users\\1961\\.nuget\\packages\\",
+        "outputPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixBusiness\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\1961\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj": {
+                "projectPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj",
+        "projectName": "PhoenixDataAccess",
+        "projectPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj",
+        "packagesPath": "C:\\Users\\1961\\.nuget\\packages\\",
+        "outputPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\1961\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixWeb\\PhoenixWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixWeb\\PhoenixWeb.csproj",
+        "projectName": "PhoenixWeb",
+        "projectPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixWeb\\PhoenixWeb.csproj",
+        "packagesPath": "C:\\Users\\1961\\.nuget\\packages\\",
+        "outputPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixWeb\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\1961\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixBusiness\\PhoenixBusiness.csproj": {
+                "projectPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixBusiness\\PhoenixBusiness.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "BCrypt.net-next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+    @model Reservation.MakeReservationViewModel
+		<div class="table-data">
+            <div class="data-set">
+                <table class="data-roaster">
+                    <tbody>
+						<tr>
+                            <td>Room Number</td>
+                            <td>@Model.DetailRooms.Number</td>
+                        </tr>
+                        <tr>
+                            <td>Floor</td>
+                            <td>@Model.DetailRooms.Floor</td>
+                        </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td>@Model.DetailRooms.RoomType</td>
+                        </tr>
+                        <tr>
+                            <td>Guest Limit</td>
+                            <td>@Model.DetailRooms.GuestLimit</td>
+                        </tr>
+                        <tr>
+                            <td>Cost</td>
+                            <td class="cost">@Model.DetailRooms.Cost</td>
+                        </tr>
+                        <hr>
+                        <form action="" method="post">
+                            <div class="bookDate">
+                                <tr>
+                                    <td>Chek In</td>
+                                    <td><input type="date" class="checkIn" asp-for="@Model.CheckIn"></td>
+                                </tr>
+                                <tr>
+                                    <td>Chek Out</td>
+                                    <td><input type="date" class="checkOut" asp-for="@Model.CheckOut"></td>
+                                </tr>
+                            </div>
+                            <hr>
+                            <tr>
+                                <td>Total Cost</td>
+                                <td><input type="text" class="costhotel" disabled value="0" asp-for="@Model.Cost"></td>
+                            </tr>
+                            <tr>
+                                <td>Payment Method</td>
+                                <td>
+                                    <select asp-for="@Model.PaymentMethod">
+                                        <option value="CC">Credit Card</option>
+                                        <option value="DD">Direct Debit</option>
+                                        <option value="VO">Vocher</option>
+                                        <option value="EM">Electronic Money</option>
+                                        <option value="CA">Cash</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Remark</td>
+                                <td><textarea asp-for="@Model.Remark" cols="30" rows="10"></textarea></td>
+                            </tr>
+                        </form>
+                        <tr>
+                            <td colspan="2">
+                                <a href="#"  class="btn reservation">Submit Reservation</a>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="~/JS/makereservation.js"></script>

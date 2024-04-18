@@ -1,0 +1,43 @@
+@{
+	var role = User.Claims.ToList()[1].Value;
+}
+<nav class="sidebar">
+	<div class="menu-content">
+		@{
+			if(role == "Administrator"){
+				<ul class="menu-items">
+					<li class="item">
+						<a asp-action="Index" asp-controller="Home">Dashboard</a>
+					</li>
+					<li class="item">
+						<a asp-action="Index" asp-controller="Admin">Account</a>
+					</li>
+					<li class="item">
+						<a asp-action="Index" asp-controller="Room">Room</a>
+					</li>
+					<li class="item">
+						<a asp-action="Index" asp-controller="Inventory">Inventory</a>
+					</li>
+					<li class="item">
+						<a asp-action="Index" asp-controller="RoomService">Room Service</a>
+					</li>
+					<li class="item">
+						<a asp-action="Index" asp-controller="ReservationLog">Reservation Log</a>
+					</li>
+				</ul>
+			}else{
+				<ul class="menu-items">
+					<li class="item">
+						<a asp-action="Index" asp-controller="Home">Dashboard</a>
+					</li>
+					<li class="item">
+						<a asp-action="Index" asp-controller="Booking">Booking</a>
+					</li>
+					<li class="item">
+						<a href="#">My Room</a>
+					</li>
+				</ul>
+			}
+		}
+	</div>
+</nav>

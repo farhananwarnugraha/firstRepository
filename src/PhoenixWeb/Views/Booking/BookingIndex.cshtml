@@ -1,0 +1,73 @@
+		@model Room.RoomIndexViewModel
+		<div class="table-data">
+			
+			<div class="form-search">
+                <p>Search Data</p>
+                <form action="" method="post" class="serach">
+                    <input type="text" name="" id="" placeholder="Search by Inputan">
+                    <select name="" id="">
+                        <option value=" " selected>All Room Type</option>
+                        <option value="#" >option One</option>
+                        <option value="#" >Option Two</option>
+                    </select>
+                    <select name="" id="">
+                        <option value=" " selected>All Status</option>
+                        <option value="Vacant" >Vacant</option>
+                        <option value="Booked" >Booked</option>
+                    </select>
+					<button type="submit">Search</button>
+                </form>
+            </div>   
+
+            <div class="data-set">
+                <table class="data">
+                    <thead>
+                        <th>Action</th>
+                        <th>Name</th>
+                        <th>Floor</th>
+                        <th>Room Type</th>
+                        <th>Guest Limit</th>
+                        <th>Cost per Day</th>
+                        <th>Status</th>
+                    </thead>
+                    <tbody>
+						@foreach(var Room in Model.Rooms){
+                            if(Model.Rooms.Count == 0){
+                                <tr>
+                                    <td colspan="7">
+                                        <p>Opps, Rooms is Empty</p>
+                                    </td>
+                                </tr>
+                            }else{
+                                <tr>
+                                    <td>
+                                        <a asp-action="Detail" asp-route-roomNumber="@Room.Number.Trim()" class="button delete" nameInventory="@Room.Number">Detail</a>
+                                    </td>
+                                    <td>@Room.Number</td>
+                                    <td>@Room.Floor</td>
+                                    <td>@Room.RoomType</td>
+                                    <td>@Room.GuestLimit</td>
+                                    <td>@Room.Cost</td>
+                                    <td>@Room.Status</td>
+                                </tr>
+                            }
+						}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">
+                                <div class="pagination">
+                                    <div>Page @Model.Paginations.PageNumber of @Model.Paginations.TotalPages </div>
+                                        <div>
+											@for(int pageNumber=1 ; pageNumber<=Model.Paginations.TotalPages; pageNumber++){
+                                            	<a  asp-action="Index" asp-route-pageNumber="@pageNumber" asp-route-roomNumber="@Model.RoomNumber" asp-route-roomType="@Model.RoomType"  class="number"> @pageNumber </a>
+											}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>

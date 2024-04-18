@@ -1,0 +1,74 @@
+@model Admin.AdminIndexViewModel
+        <div class="table-data">   
+            <div class="data-set">
+                <div class="button-add">
+                    <a href="#" class="create-button">Add New Admin</a>
+                </div>
+                <table class="data">
+                    <thead>
+                        <th>Action</th>
+                        <th>Username</th>
+                        <th>Job Title</th>
+                    </thead>
+                    <tbody>
+						@foreach(var listAdmin in Model.Administrators){
+							<tr>
+								<td>
+									<a href="#" class="button edit" username="@listAdmin.Username">Edit</a>
+								</td>
+								<td>@listAdmin.Username</td>
+								<td>@listAdmin.JobTitle</td>
+							</tr>
+						}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <div class="pagination">
+                                    <div>Page @Model.Paginations.PageNumber of @Model.Paginations.TotalPages</div>
+                                        <div>
+											@for(int pageNumber=1 ; pageNumber<=Model.Paginations.TotalPages; pageNumber++){
+                                            	<a  asp-action="Index" asp-route-pageNumber="@pageNumber" class="number"> @pageNumber </a>
+											}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="modal-layer">
+            <div class="input-update">
+                <form method="post" class="upsert-form" action="">
+                    <h3>Add New Admin</h3>
+                    <input type="hidden" />
+                    <input type="hidden" />
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label>Username *</label></td>
+                                <td>
+                                    <input type="text" name="username">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Job Tittle *</label></td>
+                                <td>
+                                    <input type="text" name="jobtittle">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="password" name="password" hidden disabled></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="insert modal-button" >Simpan</button>
+                    <button class="update modal-button">Ubah</button>
+                    <button type="button" class="cancle modal-button">Batal</button>
+                </form>
+            </div>
+        </div>
+        <script src="~/JS/admin.js"></script>

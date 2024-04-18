@@ -1,0 +1,121 @@
+		@model RoomServices.RoomServicesIndexViewModel
+		<div class="table-data">
+			
+			<div class="form-search">
+                <p>Search Data</p>
+                <form action="" method="post" class="serach">
+                    <input type="text" asp-for="@Model.EmployeeNumber" placeholder="Employee Number">
+                    <input type="text" asp-for="@Model.FullName" placeholder="Full Name">
+					<button type="submit">Search</button>
+                </form>
+            </div>   
+
+            <div class="data-set">
+                <div class="button-add">
+                    <a href="#" class="create-button">Add new Employee</a>
+                </div>
+                <table class="data">
+                    <thead>
+                        <th>Action</th>
+                        <th>Employee Number</th>
+                        <th>Full Name</th>
+                        <th>Outsourching Company</th>
+                    </thead>
+                    <tbody>
+						@foreach(var employee in Model.Employees){
+                            if(Model.Employees.Count == 0){
+                                <tr>
+                                    <td colspan="4">
+                                        <p>Opps, Employee is Empty</p>
+                                    </td>
+                                </tr>
+                            }else{
+                                <tr>
+                                    <td>
+                                        <a href="#" class="button edit" employeeNumber="@employee.EmployeeNumber">Edit</a>
+                                        <a asp-action="Roaster" asp-route-employeeNumber="@employee.EmployeeNumber.Trim()" class="button delete" nameInventory="@employee.EmployeeNumber">Roaster</a>
+                                    </td>
+                                    <td>@employee.EmployeeNumber</td>
+                                    <td>@employee.FullName</td>
+                                    <td>@employee.OutsourcingCompany</td>
+                                </tr>
+                            }
+						}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">
+                                <div class="pagination">
+                                    <div>Page @Model.Paginations.PageNumber of @Model.Paginations.TotalPages </div>
+                                        <div>
+											@for(int pageNumber=1 ; pageNumber<=Model.Paginations.TotalPages; pageNumber++){
+                                            	<a  asp-action="Index" asp-route-pageNumber="@pageNumber" asp-route-employeeNumber="@Model.EmployeeNumber" asp-route-fullName="@Model.FullName"  class="number"> @pageNumber </a>
+											}
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        @* Modal Layer Input *@
+        <div class="modal-layer">
+            <div class="input-update">
+                <form method="post" class="upsert-form" action="">
+                    <h3>Add New Employee</h3>
+                    <input type="hidden" />
+                    <input type="hidden" />
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label>Employee Number *</label></td>
+                                <td>
+                                    <input type="text" name="number" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>First Name*</label></td>
+                                <td>
+                                    <input type="text" name="firstName" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Middle Name </label></td>
+                                <td>
+                                    <input type="text" name="middleName" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Last Name </label></td>
+                                <td>
+                                    <input type="text" name="lastName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Outsourcing Company*</label></td>
+                                <td>
+                                    <input type="text" name="outsourcingCompany">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="submit" class="insert modal-button" >Simpan</button>
+                    <button type="submit" class="update modal-button">Ubah</button>
+                    <button type="button" class="cancle modal-button">Batal</button>
+                </form>
+            </div>
+        </div>
+        @* Confirmation *@
+        <div class="modal-layer confirmation-delete">
+            <div class="confirmtion-delete">
+                <h2>Delete Employee</h2>
+                <h3>Are You sure for delete this Employee?</h3>
+                <div class="button-class">
+                    <button class="yes-button" type="submit">Delete</button>
+                    <button class="no-button" type="submit">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <script src="~/JS/roomService.js"></script>

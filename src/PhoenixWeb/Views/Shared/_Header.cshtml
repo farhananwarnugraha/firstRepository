@@ -1,0 +1,12 @@
+@{
+	var username = User.FindFirst("username")?.Value??"";
+	var jobTittle = User.FindFirst("jobTitle")?.Value??"Guest";
+}
+<header class="navbar">
+	<h3>@ViewData["title"]</h3>
+	<div class="profile-area">
+		<p>@username, @jobTittle</p>
+		<button type="submit" class="change-password">Cahange Password</button>
+		<a asp-controller="Auth" asp-action="Logout" class="log-out">Logout</a>
+	</div>
+</header>

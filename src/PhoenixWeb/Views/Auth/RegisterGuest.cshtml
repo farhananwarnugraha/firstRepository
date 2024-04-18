@@ -1,0 +1,39 @@
+    @{
+        Layout = "_LayoutLogin";
+    }
+    @model Auth.AuthRegisterViewModel
+    <div id="id01" class="modal">
+        <form class="modal-content animate" asp-action="Register" method="post">
+            <div class="imgcontainer">
+                <h3>Guest Register</h3>
+            </div>
+        
+            <div class="container">
+                <input type="text" placeholder="Enter Username" asp-for="Username" required>
+                <input type="password" placeholder="Enter Password" asp-for="Password" required>
+                <input type="password" placeholder="Confirm Password" asp-for="ConfirmPassword">                
+                <input type="text" placeholder="Enter First Name" asp-for="FirstName" >
+                <input type="text" placeholder="Enter Your Middle Name" asp-for="MiddleName">
+                <input type="text" placeholder="Enter Your Last Name" asp-for="LastName" >              
+                <input type="date" placeholder="Enter Your Last Name" asp-for="BirthDate" required>
+                <div class="gender">
+                    <label asp-for="Gender"><b>Male</b></label>
+                    <input type="radio" placeholder="Enter Your Last Name" asp-for="Gender" value="M">
+                    
+                    <label asp-for="Gender"><b>Female</b></label>
+                    <input type="radio" placeholder="Enter Your Last Name" asp-for="Gender" value="F">
+                </div>              
+                <input type="text" placeholder="Enter Cityzenship" asp-for="Citizenship" required>             
+                <input type="text" placeholder="Enter ID Number" asp-for="IdNumber" required>
+                <button type="submit">Register</button>
+                <label>
+               
+                </label>
+            </div>
+        
+            <div class="container-bottom">
+                You have account?
+                <a asp-action="Index" classs="cancelbtn">Login here!</a>
+            </div>
+        </form>
+      </div>
