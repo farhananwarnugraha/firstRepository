@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj": {}
+    "C:\\Self Project\\LearnGit\\firstRepository\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj": {
+    "C:\\Self Project\\LearnGit\\firstRepository\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj",
+        "projectUniqueName": "C:\\Self Project\\LearnGit\\firstRepository\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj",
         "projectName": "PhoenixDataAccess",
-        "projectPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj",
+        "projectPath": "C:\\Self Project\\LearnGit\\firstRepository\\src\\PhoenixDataAccess\\PhoenixDataAccess.csproj",
         "packagesPath": "C:\\Users\\1961\\.nuget\\packages\\",
-        "outputPath": "C:\\Bootcamp\\Framework\\Phoenix\\src\\PhoenixDataAccess\\obj\\",
+        "outputPath": "C:\\Self Project\\LearnGit\\firstRepository\\src\\PhoenixDataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\1961\\AppData\\Roaming\\NuGet\\NuGet.Config"

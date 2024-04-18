@@ -12,3 +12,17 @@ C:\Bootcamp\Framework\Phoenix\src\PhoenixDataAccess\obj\Debug\net6.0\refint\Phoe
 C:\Bootcamp\Framework\Phoenix\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.pdb
 C:\Bootcamp\Framework\Phoenix\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.genruntimeconfig.cache
 C:\Bootcamp\Framework\Phoenix\src\PhoenixDataAccess\obj\Debug\net6.0\ref\PhoenixDataAccess.dll
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\bin\Debug\net6.0\PhoenixDataAccess.deps.json
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\bin\Debug\net6.0\PhoenixDataAccess.runtimeconfig.json
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\bin\Debug\net6.0\PhoenixDataAccess.dll
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\bin\Debug\net6.0\PhoenixDataAccess.pdb
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.csproj.AssemblyReference.cache
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.AssemblyInfoInputs.cache
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.AssemblyInfo.cs
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.csproj.CoreCompileInputs.cache
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.dll
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\refint\PhoenixDataAccess.dll
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.pdb
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\PhoenixDataAccess.genruntimeconfig.cache
+C:\Self Project\LearnGit\firstRepository\src\PhoenixDataAccess\obj\Debug\net6.0\ref\PhoenixDataAccess.dll
